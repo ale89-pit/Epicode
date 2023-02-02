@@ -25,17 +25,16 @@
           <figcaption>Epicode - Il blog dei developers</figcaption>
         </figure>
         <nav>
-            <ul>
-                <a href="#home"><li>Home</li></a>
-                <a href="#Articoli"><li>Articoli</li></a>
-                <a href="#Job"><li>Lavora con noi</li></a>
+            <UL>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#Articoli">Articoli</a></li>
+                <li><a href="#Job">Lavora con noi</a></li>
 
 
             </UL>
         </nav>
       </header>
-    <hr>
-    <main id="main">
+      <main id="main">
         <div id="container">
             <Section>
                 <div><!--primo paragrafo-->
@@ -70,9 +69,7 @@
                         totale.
                     </p>
                 </div>
-            </Section>
-
-        <div id="tabella"><!--tabella diffusione-->
+                <div id="tabella"><!--tabella diffusione-->
             <table>
                 <caption>
                     <p><strong>Diffusione dei CSS</strong</p>
@@ -113,57 +110,68 @@
                 </tbody>
             </table>
         </div>
-        <aside>
-            <p>Un test di validazione potrà essere fatto tramite il <a href="https://jigsaw.w3.org/css-validator/"
-                    title="Tool di validazione" target="_blank"><b>tool online</b> </a> dedicato allo scopo. Una volta
-                ottimizzato il
-                tutto, avremo raggiunto il nostro obiettivo ed essere stati dei veri developers come loro:
-            </p>
-            <iframe width="320" height="320" src="https://www.youtube.com/embed/dvOvHXruEDM?start=1"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </aside>
-        <article id="formnews"> <!--newsletter-->
-            <h2>Novità</h2>
-            <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
-            <form method="post" action="codice.php" autoscomplete="on" style="border: 2px;">
-                <fieldset><label for="email"></label>
-                    <input type="email" name="email" id="email" placeholder="Inserisci la tua email"
-                        autocomplete="address-level1">
-                    <button type="submit" value="iscritto">Iscriviti!!</button>
-                </fieldset>
-            </form>
+            </Section>
+
+            <aside>
+                <p>
+                  Un test di validazione potrà essere fatto tramite il
+                  <a href="https://jigsaw.w3.org/css-validator/" title="Tool di validazione" target="_blank"
+                    ><b>tool online</b>
+                  </a>
+                  dedicato allo scopo. Una volta ottimizzato il tutto, avremo raggiunto il nostro obiettivo ed essere stati dei
+                  veri developers come loro:
+                </p>
+                <iframe
+                  width="320"
+                  height="320"
+                  src="https://www.youtube.com/embed/dvOvHXruEDM?start=1"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay ; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                >
+                </iframe>
+              </aside>
+              <article id="formnews"> <!--newsletter-->
+                <h2>Novità</h2>
+                <p>Vuoi rimanere aggiornato su altre novità del blog? Iscriviti alla nostra newsletter:</p>
+                <form method="post" action="codice.php" autoscomplete="on" style="border: 2px;">
+                    <fieldset><label for="email"></label>
+                        <input type="email" name="email" id="email" placeholder="Inserisci la tua email"
+                            autocomplete="address-level1">
+                        <button type="submit" value="iscritto">Iscriviti!!</button>
+                    </fieldset>
+                </form>
+            </article>
+            <article class="article"> <!--articoli correlati-->
+                <h2>Articoli Correlati</h2>
+            <div class="data">
+                <a href="javascript:void(0)">Validare il codice HTML</a>
+                <p class="tag"> Categoria: develop</p>
+                <p class="date"> Data: 18-9-2020</p>
+            </div>
+            <div><a href="javascript:void(0)">Correggere la sintassi</a>
+                <p  class="tag">Categoria: develop</p>
+                <p class="date"> Data: 16-9-2020</p>
+            </div>
+
+            <div id="articolo"><a href="javascript:void(0)">Meno Kb nella pagina</a>
+                <p  class="tag">Categoria: ottimizzatore</p>
+                <p class="date"> Data: 30-9-2020</p>
+            </div>
+            
+
         </article>
-        <article class="article"> <!--articoli correlati-->
-            <h2>Articoli Correlati</h2>
-        <div class="data">
-            <a href="javascript:void(0)">Validare il codice HTML</a>
-            <p class="tag"><span class="tag"></span> Categoria: develop</p>
-            <p class="category"><img width="20px" src="https://img.icons8.com/ios/50/null/tear-off-calendar--v1.png"/> Data: 18-9-2020</p>
-        </div>
-        <div><a href="javascript:void(0)">Correggere la sintassi</a>
-            <p class="tag">Categoria: develop</p>
-            <p class="category"><img width="20px" src="https://img.icons8.com/ios/50/null/tear-off-calendar--v1.png"/> Data: 16-9-2020</p>
-        </div>
-        <div id="articolo"><a href="javascript:void(0)">Meno Kb nella pagina</a>
-            <p class="tag">Categoria: ottimizzatore</p>
-            <p class="category"><img width="20px" src="https://img.icons8.com/ios/50/null/tear-off-calendar--v1.png" /> Data: 30-9-2020</p>
-        </div>
-        
-        </article>
-        <hr>
-    </main>
-        <footer>
-            <p style="font-size: small;">Blog Epico &copy2023</p>
-            <p style="font-size: small;"><em>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi
+
+ 
+              <footer id="foot">
+            <p style="font-size: medium;">Blog Epico &copy2021</p>
+            <p style="font-size: medium;"><em>Testata online di Mario Rossi, registrata con prot. n.213/2018 - via Luigi
                     Einaudi 2 - Milano. P.IVA 00112233. <a
                         href="mailto:info@epicode.school">info@epicode.school</a></em></p>
         </footer>
     
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js%22%3E"></script>
-            <script type= "module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js%22%3E"></script>
+
 </body>
 
 </html>

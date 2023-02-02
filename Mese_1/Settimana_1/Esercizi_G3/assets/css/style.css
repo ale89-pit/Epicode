@@ -1,9 +1,11 @@
   @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-body{
+body {
+    /*border:2px solid black;*/
     font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    width:100vw;
+    text-align: center;
+    margin:auto 2em;
+    padding:2em 0;
 }
 
 .logo{
@@ -18,7 +20,7 @@ body{
     margin-top:2em;
     height: 4em;
     border-top:2px solid  #ffd977;
-    text-align: center;
+    
 }
 .misure{
     margin:0 auto;
@@ -26,13 +28,13 @@ body{
     height: 100%;
 }
 h1{
-    text-align: center;
+    
     font-family: 'Roboto, sans-serif';
 }
 .videosection{
     height: 315;
     width: 560;
-    text-align: center;
+    
     color:rgb(167, 168, 168);
 }
 aside{
@@ -49,7 +51,7 @@ a, a:link, a:visited{
 }
 h4{
     padding-bottom:2em;
-    border-bottom:1px solid #004d4d;
+    border-bottom:1px solid #00c9c9;
 }
 
 

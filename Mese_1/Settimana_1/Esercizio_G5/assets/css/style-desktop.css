@@ -10,6 +10,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     line-height: 1.65;
+    box-sizing:border-box;
 
 }
 
@@ -39,10 +40,11 @@ h2 {
 }
 
 .banner {
+    height: 200px;
     text-align: center;
     padding: 2em;
     background: url('../images/banner.jpg') no-repeat center;
-    background-size: cover;
+    background-size:cover;
 
 }
 /* bottone nell'area banner */

@@ -22,9 +22,9 @@ h1, h4, h5{
     
     color:#25a2c3
 }
-h2{
+h2,h3{
     color:white;
-    font-weight: bold;
+    font-weight:bolder;
 }
 
 .foto1{
@@ -57,10 +57,11 @@ header{
 }
 .cardsection{
     width: 80%;
-    margin: 2em auto; 
-    padding: 2em;
+    margin: 0 auto; 
+    
 }
 .cit{
+    padding:1em;
     background-color: #e22d0e;
 
 }

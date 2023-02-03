@@ -19,12 +19,12 @@ a, a:link, a:visited,address{
 }
 h1, h4, h5{
     font-family: 'Montserrat', sans-serif;
-    
     color:#25a2c3
 }
-h2,h3{
+h2{
+    font-family: 'Montserrat', sans-serif;
     color:white;
-    font-weight:bolder;
+    font-weight:900;
 }
 
 .foto1{

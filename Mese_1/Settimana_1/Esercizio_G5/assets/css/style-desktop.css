@@ -45,7 +45,7 @@ h2 {
     background-size: cover;
 
 }
-
+/* bottone nell'area banner */
 .btn {
     color:white;
     padding: 0.5em;
@@ -54,7 +54,7 @@ h2 {
     background-color:#f04c2f;
     font-family: ;
 }
-
+/* container per foto e commenti laterali */
 .container {
     margin: 1em auto;
     padding: 4em;
@@ -83,16 +83,19 @@ p>.cardsection {
     padding: 0;
     margin: 0
 }
+/* citazione */
 .cit{
     background-color: #f04c2f;
     text-align: center;
     color: white;
     padding:1em;
 }
+/* ridimensionamento immagine */
 .imgsize{
     width: 100%;
     height: 100%;
 }
+/* container2 per le tre card con i relativi titoli */
 .container2{
     margin: 0 auto;
     padding: 4em;
@@ -127,6 +130,7 @@ p>.cardsection {
     left: 60%;
     text-align: center;
 }
+/* footer */
 footer{
     text-align: center;
     background-color:#25a2c3;

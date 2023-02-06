@@ -13,4 +13,4 @@ document.getElementById('first').innerHTML = 'output scritto da Javascript' ;
 
 document.getElementById('second').innerHTML = Animale_Felino_2 + '' + 'scritto da javascript';
  
-document.write('<h1>Iniziamo la nostra pratica<h1>');
+document.getElementById('title').innerHTML = 'Iniziamo la nostra pratica';

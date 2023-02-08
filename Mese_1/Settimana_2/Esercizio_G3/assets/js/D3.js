@@ -43,14 +43,28 @@ if (numero1 < numero2 ){
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-var numeroFornito = 8;
 
-if (numeroFornito !== 5){
+
+/*if (numeroFornito !== 5){
   var string2 = 'not equal';
 }
 
-console.log(string2);
+console.log(string2);*/
+document.getElementById('calcola2').addEventListener('click', function(){
+  var numeroFornito = document.getElementById('numero3').value;
 
+if (numeroFornito == 5){
+  var string2 = ' equal';
+  scrivi2(string2);
+}else{
+  string2 = 'not equal';
+  scrivi2(string2);
+}
+})
+function scrivi2(string2){
+  document.getElementById('risultato2').innerHTML = string2;
+
+}
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */

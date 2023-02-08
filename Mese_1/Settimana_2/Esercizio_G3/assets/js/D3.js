@@ -53,11 +53,11 @@ console.log(string2);*/
 document.getElementById('calcola2').addEventListener('click', function(){
   var numeroFornito = document.getElementById('numero3').value;
 
-if (numeroFornito == 5){
-  var string2 = ' equal';
+if (numeroFornito != 5){
+  var string2 = 'not  equal';
   scrivi2(string2);
 }else{
-  string2 = 'not equal';
+  string2 = 'equal';
   scrivi2(string2);
 }
 })
@@ -156,10 +156,21 @@ console.log(array);
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+let text = 'ciao'
+
+
+if (typeof text === 'number'){
+  console.log('è un numero');
+  }else if (typeof text === 'string'){
+    console.log('non è un numero')
+  }
+
 
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
+
+
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let number = 50;

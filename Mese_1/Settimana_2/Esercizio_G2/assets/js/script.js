@@ -22,8 +22,6 @@ document.getElementById('let2').innerHTML += nome;
 
 
 
-
-
 //Valore iniziale
 let valoreIniziale = 15
 //Somma + incremento

@@ -5,8 +5,8 @@
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 
-let numero1 = 8 //document.getElementById('numero1').value;
-let numero2 = 5 //document.getElementById('numero2').value;
+/*let numero1 = document.getElementById('numero1').value;
+let numero2 = document.getElementById('numero2').value;
 
 if (numero1 < numero2 ){
   var string = numero2 + 'è maggiore';
@@ -19,8 +19,24 @@ if (numero1 < numero2 ){
     
   }
   
-  console.log(string);
+  */
+document.getElementById('calcola').addEventListener('click', function(){;
+let numero1 = document.getElementById('numero1').value;
+let numero2 = document.getElementById('numero2').value;
+if (numero1 < numero2 ){
+  var string = numero2 + 'è maggiore';
+  scrivi(string)
+}else if (numero2 < numero1){
+  string = numero1 + 'è maggiore'
+  scrivi(string)
+  }else{
+    string = 'uguali'
+    scrivi(string)
+  }})
 
+  function scrivi(string){
+  document.getElementById('risultato').innerHTML = string;
+}
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -64,16 +80,16 @@ var n1 = 5;
 var n2 = 8;
 
 if (n1 == 8 || n2 == 8){
-  var string ='uno dei due numeri è 8';
+  var string3 ='uno dei due numeri è 8';
 }else if (n1 + n2 == 8){
-  string = "la somma dei numeri è 8";
+  string3 = "la somma dei numeri è 8";
 }else if(n1 - n2 ==8){
-  string = "la sottrazione è 8";
+  string3 = "la sottrazione è 8";
 }else {
-  string = "non 8";
+  string3 = "non 8";
 }
 
-console.log(string);
+console.log(string3);
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".

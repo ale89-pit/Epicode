@@ -127,15 +127,21 @@ console.log(characters);
   {name: "Leia Organa", hair_color: "brown", eye_color: "brown"}
   CONSOLE LOG
 */
-let femaleCharacters = [
-  {
-    "name": "Leia Organa",
-    "hair_color": "bown",
-    "eye_color": "brown"
-  }
 
-]
-console.log(femaleCharacters);
+    const femaleCharacters = [];
+    for (let i = 0; i < starWarsCharacters.length; i++){
+      if(starWarsCharacters[i].gender == 'female'){
+        femaleCharacters.push({
+          name : starWarsCharacters[i].name,
+          hair_color : starWarsCharacters[i].hair_color,
+          eye_color : starWarsCharacters[i].eye_color,
+        })
+      }
+    }
+    console.log(femaleCharacters)
+      
+    
+
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
   ognuna di queste proprietà contiene un array vuoto
@@ -243,7 +249,25 @@ Usa uno più for loop per raggiungere il risultato
 
 Una volta fatto crea un conosle.log per controllare la proprietà length di "characters" prima e dopo l'operazione
 */
+console.log(femaleCharacters);
+console.log(characters);
 
+for (i = 0; i < characters.length; i++){
+  for(j = 0; j < femaleCharacters.length; j++){
+    if(femaleCharacters[j].name == characters[i]){
+    characters.splice(i,1);
+ } }
+}
+console.log(characters);
 /* EXTRA ESERCIZIO 10
 Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharacters" e ne stampi in console le proprietà in modo discorsivo
 */
+var random = Math.floor(Math.random() * starWarsCharacters.length);
+
+console.log(random);
+
+
+  
+  console.log(starWarsCharacters[random]);
+
+  

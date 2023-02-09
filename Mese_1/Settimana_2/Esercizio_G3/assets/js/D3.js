@@ -20,23 +20,23 @@ if (numero1 < numero2 ){
   }
   
   */
-document.getElementById('calcola').addEventListener('click', function(){;
+document.getElementById('calcola').addEventListener('click', function(){
 let numero1 = document.getElementById('numero1').value;
 let numero2 = document.getElementById('numero2').value;
-if (numero1 < numero2 ){
-  var string = numero2 + 'è maggiore';
-  scrivi(string)
-}else if (numero2 < numero1){
-  string = numero1 + 'è maggiore'
-  scrivi(string)
+if (numero1 > numero2){
+   
+  document.getElementById('risultato').innerHTML =` ${numero1} è maggiore`;
+}else if (numero2 > numero1){
+  
+  document.getElementById('risultato').innerHTML = ` ${numero2} è maggiore`;
   }else{
-    string = 'uguali'
-    scrivi(string)
+    
+    string = document.getElementById('risultato').innerHTML = 'uguali';
   }})
 
-  function scrivi(string){
-  document.getElementById('risultato').innerHTML = string;
-}
+
+  
+
 
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -71,15 +71,23 @@ function scrivi2(string2){
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-var num = 4 ;
 
-if (num % 5 == 0){
-  var str = 'Divisibile per 5'
-}else if ( num % 5 !==0){
-  str = 'Non divisibile per 5'
-}
+var num = document.getElementById('numero6').value;
 
-console.log(str);
+document.getElementById('calcola4').addEventListener('click', function(){
+  
+      
+      num = parseInt(num);
+  
+  if (num % 5 == 0){
+    document.getElementById('risultato4') = 'Divisibile per 5';
+  }else if ( num % 5 !== 0){
+    document.getElementById('risultato4')  = 'Non divisibile per 5'
+  }
+})
+
+
+
 
 
 
@@ -90,20 +98,33 @@ console.log(str);
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-var n1 = 5;
-var n2 = 8;
 
-if (n1 == 8 || n2 == 8){
-  var string3 ='uno dei due numeri è 8';
-}else if (n1 + n2 == 8){
-  string3 = "la somma dei numeri è 8";
-}else if(n1 - n2 ==8){
-  string3 = "la sottrazione è 8";
+
+
+document.getElementById('calcola3').addEventListener('click', function(){
+  var n1 = document.getElementById('numero4').value;
+n1 = parseInt(n1);
+var n2 = document.getElementById('numero5').value;
+n2 = parseInt(n2);
+
+  if (n1 === 8 || n2 === 8){
+    document.getElementById('risultato3').innerHTML  ='uno dei due numeri è 8';
+ 
+}else if (n1 + n2 === 8){
+  document.getElementById('risultato3').innerHTML = "la somma dei numeri è 8";
+  
+}else if(n1 - n2 === 8){
+  document.getElementById('risultato3').innerHTML  = "la sottrazione è 8";
+ 
 }else {
-  string3 = "non 8";
+  document.getElementById('risultato3').innerHTML = "non è 8";
+  
 }
+;
+})
 
-console.log(string3);
+
+//console.log(string3);
 
 /* ESERCIZIO 5
   Stai lavorando su un sito di e-commerce. Stai salvando il saldo totale del carrello dell'utente in una variabile "totalShoppingCart".

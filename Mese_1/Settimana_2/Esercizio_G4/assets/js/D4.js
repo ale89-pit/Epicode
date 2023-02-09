@@ -186,8 +186,8 @@ console.log(eyeColor);
   */
 let massaTotale = 0;
 let m = 0
-while(m < starWarsCharacters.length){
-  
+while (m < starWarsCharacters.length) {
+
   massaTotale += parseInt(starWarsCharacters[m].mass)
   m++
 }
@@ -207,11 +207,32 @@ Una volta fatto, modifica la massa di qualche elemento dell'equipaggio e vedi se
 CONSOLE LOG
 */
 
-
+switch (true) {
+  case (massaTotale < 500 && massaTotale > 0):
+    console.log('Ship in under loaded');
+    break;
+  case (massaTotale > 500 && massaTotale < 700):
+    console.log('Ship is half loaded');
+    break;
+  case (massaTotale > 700 && massaTotale < 900):
+    console.log('Warning: load is over 700');
+    break;
+case( massaTotale >900 && massaTotale <1000):
+console.log('Critical load: Over 900');
+break;
+case (massaTotale > 1000):
+console.log('DANGER! OVERLOAD ALERT: Jump ship now!');
+}
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 CONSOLE LOG DELL'INTERO ARRAY
 */
+for (i = 0; i < starWarsCharacters.length; i++){
+  if (starWarsCharacters[i].gender == 'n/a') {
+    starWarsCharacters[i].gender = "Robot";
+  }
+}
+console.log(starWarsCharacters)
 
 /* EXTRA ESERCIZIO 9
 

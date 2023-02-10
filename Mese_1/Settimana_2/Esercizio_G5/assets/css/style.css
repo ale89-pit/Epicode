@@ -1,11 +1,12 @@
 body {
     margin: 0;
     box-sizing: border-box;
+    background-color: darkslategray;
 }
 
 #container {
 
-
+background-color:azure;
     padding: 1em;
     width: fit-content;
     text-align: center;
@@ -20,6 +21,7 @@ body {
     height: 70px;
     background-color: rgb(0, 0, 0);
     border: 2px solid black;
+    border-radius: 15px;
 
 }
 
@@ -34,24 +36,43 @@ body {
     font-size: 1.5em;
     width: 40px;
     margin: 0.2em;
-    background-color: rgb(204, 97, 21);
+    background-color: rgb(3, 126, 9);
     color:rgb(235, 208, 57);
     border-radius: 15px;
     box-shadow: 0 9px #999;
     cursor: pointer;
 }
+.buttonC{
+    font-size: 1.5em;
+    width: 40px;
+    margin: 0.2em;
+    background-color: rgb(255, 0, 0);
+    color:rgb(235, 208, 57);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+.buttonC:hover{
+    background-color: crimson;
+}
+.buttonC:active{
+    background-color: crimson;
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
 .button:hover{
-    background-color: rgb(228, 142, 81);
+    background-color: rgb(6, 202, 16);
 
 }
 .button:active{
-    background-color: rgb(228, 142, 81);
+    background-color:rgb(6, 202, 16);;
     box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 h3 {
     text-align: center;
     margin-bottom: 2em;
+    font-size: 40px;
 }
 
 p {
@@ -61,20 +82,20 @@ p {
 }
 
 .buttonInvia {
-    width: 210px;
+    width: 150px;
     height: 30px;
-    background-color: rgb(204, 97, 21);
+    background-color: rgb(3, 126, 9);
     color:rgb(235, 208, 57);
     border-radius: 15px;
     box-shadow: 0 9px #999;
     cursor: pointer;
 }
 .buttonInvia:active{
-    background-color: rgb(228, 142, 81);
+    background-color: rgb(6, 202, 16);;
     box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 .buttonInvia:hover{
-    background-color: rgb(228, 142, 81);
+    background-color: rgb(6, 202, 16);;
 
 }

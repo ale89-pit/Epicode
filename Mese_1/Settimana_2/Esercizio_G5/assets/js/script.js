@@ -1,3 +1,6 @@
+//Dichiarazione delle variabili per ogni pulsante della calcolatrice
+
+//tastiera da 0 a 9 
 let btn0 = document.getElementById('0');
 let btn1 = document.getElementById('1');
 let btn2 = document.getElementById('2');
@@ -8,22 +11,25 @@ let btn6 = document.getElementById('6');
 let btn7 = document.getElementById('7');
 let btn8 = document.getElementById('8');
 let btn9 = document.getElementById('9');
+
+//Pulsanti operatori
 let btnDecimale = document.getElementById('.');
 let btnDivisione = document.getElementById('/');
 let btnMoltiplicazione = document.getElementById('*');
 let btnSottrazione = document.getElementById('-');
 let btnAddizione = document.getElementById('+');
-let btnOperazione = document.getElementById('operazione');
-let display = document.getElementById('text');
-let btnReset = document.getElementById('C');
 let btnQuadra = document.getElementById('√');
 
+//Cancella e Risultato
+let btnOperazione = document.getElementById('operazione');
+let btnReset = document.getElementById('C');
+//Display per la visualizzaione dei numeri e dei risultati
+let display = document.getElementById('text');
 
-btnQuadra.addEventListener('click', function(){
-display.innerText = Math.sqrt(display.innerText);
 
-})
+//Button tastierino numerico
 btn0.addEventListener('click', function(){
+   
     display.innerHTML += btn0.value ;
 })
 btn1.addEventListener('click', function(){
@@ -53,6 +59,14 @@ btn8.addEventListener('click', function(){
 btn9.addEventListener('click', function(){
     display.innerHTML += btn9.value ;
 })
+btnDecimale.addEventListener('click', function(){
+    display.innerHTML += btnDecimale.value ;
+})
+
+//fine tastierino
+
+//Button operazioni
+
 btnDivisione.addEventListener('click', function(){
     display.innerHTML += btnDivisione.value ;
 })
@@ -65,17 +79,19 @@ btnSottrazione.addEventListener('click', function(){
 btnAddizione.addEventListener('click', function(){
     display.innerHTML += btnAddizione.value ;
 })
-btnDecimale.addEventListener('click', function(){
-    display.innerHTML += btnDecimale.value ;
+//Button Radice quadrata
+btnQuadra.addEventListener('click', function(){
+display.innerText = Math.sqrt(display.innerText);
 })
 
- 
+
+//Risultato 
 btnOperazione.addEventListener('click', function(){
    display.innerText = eval(display.innerText);
    display.innerHTML = display.innerText;
     
 })
-
+//Button Reset
 btnReset.addEventListener('click', function(){
     display.innerText = '' ; 
 })

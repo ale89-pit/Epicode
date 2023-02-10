@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    
+    /*padding: 2em;*/
+    
+    width:fit-content;
+    text-align: center;
+    margin: 4em auto;
+    border: 2px solid black;
+}
+#display{
+    margin: 0 auto;
+    width:auto;
+    height: 80px;
+    background-color: aqua;
+
+}
+#cal{
+    width: ;
+
+    
+}
+.button{
+    width: 60px;
+    height: 60px;
+    margin: 0.3em 0;
+}

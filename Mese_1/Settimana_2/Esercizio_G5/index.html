@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,35 +8,53 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <h3>La mia calcolatrice</h3>
     <div id="container">
-        
-        <div id="display"><p id="text"></p></div>
-        <div id="cal">
-            
-            <input class="button" type="submit" id="9" value="9">
-            <input class="button" type="submit" id="8" value="8">
-            <input class="button" type="submit" id="7" value="7">
-            <input class="button" type="submit" id="/" value="/"><br>
-            <input class="button" type="submit" id="6" value="6">
-            <input class="button" type="submit" id="5" value="5">
-            <input class="button" type="submit" id="4" value="4">
-            <input class="button" type="submit" id="*" value="*"><br>
-            <input class="button" type="submit" id="3" value="3">
-            <input class="button" type="submit" id="2" value="2">
-            <input class="button" type="submit" id="1" value="1">
-            <input class="button" type="submit" id="-" value="-"><br>
-            <input class="button" type="submit" id="." value=".">
-            <input class="button" type="submit" id="0" value="0">
-            <input class="buttonC" type="submit" id="C" value="C">
-            <input class="button" type="button" id="+" value="+"><br>
-            <button class="buttonInvia" type="button" id="operazione">=</button> 
-            <input class="button" type="submit" id="√" value="√">
+
+        <div id="display">
+            <p id="text"></p>
         </div>
+        <div id="cal">
+            <div class="riga">
+                <input class="button" type="submit" id="9" value="9">
+                <input class="button" type="submit" id="8" value="8">
+                <input class="button" type="submit" id="7" value="7">
+                <input class="button" type="submit" id="/" value="/">
+            </div>
+           <div class="riga">   
+               <input class="button" type="submit" id="6" value="6">
+                <input class="button" type="submit" id="5" value="5">
+               
+                    <input class="button" type="submit" id="4" value="4">
+                    <input class="button" type="submit" id="*" value="*">
+               
+               </div> <div class="riga">    
+                 <input class="button" type="submit" id="3" value="3">
+                
+                
+                    <input class="button" type="submit" id="2" value="2">
+                    <input class="button" type="submit" id="1" value="1">
+                    <input class="button" type="submit" id="-" value="-">
+                </div>
+                <div class="riga">
+                    <input class="button" type="submit" id="." value=".">
+                    <input class="button" type="submit" id="0" value="0">
+                    <input class="button" type="submit" id="√" value="√">
+                    <input class="button" type="button" id="+" value="+">
+                </div>
+                <div class="riga">
+                    
+                    <button class="buttonInvia" type="button" id="operazione">=</button>
+                    <input class="buttonC" type="submit" id="C" value="C">
+                </div>
 
-    </div>
 
-    <script src="assets/js/script.js"></script>
+
+            </div>
+
+            <script src="assets/js/script.js"></script>
 </body>
+
 </html>

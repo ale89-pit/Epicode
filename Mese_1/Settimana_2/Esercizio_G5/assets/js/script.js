@@ -18,6 +18,7 @@ let display = document.getElementById('text');
 let btnReset = document.getElementById('C');
 let btnQuadra = document.getElementById('√');
 
+
 btnQuadra.addEventListener('click', function(){
 display.innerText = Math.sqrt(display.innerText);
 

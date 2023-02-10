@@ -16,7 +16,12 @@ let btnAddizione = document.getElementById('+');
 let btnOperazione = document.getElementById('operazione');
 let display = document.getElementById('text');
 let btnReset = document.getElementById('C');
+let btnQuadra = document.getElementById('√');
 
+btnQuadra.addEventListener('click', function(){
+display.innerText = Math.sqrt(display.innerText);
+
+})
 btn0.addEventListener('click', function(){
     display.innerHTML += btn0.value ;
 })
@@ -62,6 +67,7 @@ btnAddizione.addEventListener('click', function(){
 btnDecimale.addEventListener('click', function(){
     display.innerHTML += btnDecimale.value ;
 })
+
  
 btnOperazione.addEventListener('click', function(){
    display.innerText = eval(display.innerText);

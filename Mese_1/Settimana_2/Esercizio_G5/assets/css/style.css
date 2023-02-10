@@ -1,31 +1,80 @@
-body{
+body {
     margin: 0;
     box-sizing: border-box;
 }
 
-#container{
-    
-    /*padding: 2em;*/
-    
-    width:fit-content;
+#container {
+
+
+    padding: 1em;
+    width: fit-content;
     text-align: center;
-    margin: 4em auto;
+    margin: 0 auto;
     border: 2px solid black;
 }
-#display{
-    margin: 0 auto;
-    width:auto;
-    height: 80px;
-    background-color: aqua;
+
+#display {
+
+    margin: 0.5em auto;
+    width: 210px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid black;
 
 }
-#cal{
-    width: ;
 
-    
+#cal {
+    text-align: center;
+
+
 }
-.button{
-    width: 60px;
-    height: 60px;
-    margin: 0.3em 0;
+
+
+.button {
+    font-size: 1.5em;
+    width: 40px;
+    margin: 0.2em;
+    background-color: rgb(204, 97, 21);
+    color:rgb(235, 208, 57);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(228, 142, 81);
+
+}
+.button:active{
+    background-color: rgb(228, 142, 81);
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+h3 {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+p {
+    color: white;
+    text-align: right;
+    font-size: 25px;
+}
+
+.buttonInvia {
+    width: 210px;
+    height: 30px;
+    background-color: rgb(204, 97, 21);
+    color:rgb(235, 208, 57);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    cursor: pointer;
+}
+.buttonInvia:active{
+    background-color: rgb(228, 142, 81);
+    box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.buttonInvia:hover{
+    background-color: rgb(228, 142, 81);
+
 }

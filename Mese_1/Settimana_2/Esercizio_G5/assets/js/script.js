@@ -1,3 +1,4 @@
+let btn0 = document.getElementById('0');
 let btn1 = document.getElementById('1');
 let btn2 = document.getElementById('2');
 let btn3 = document.getElementById('3');
@@ -16,7 +17,9 @@ let btnOperazione = document.getElementById('operazione');
 let display = document.getElementById('text');
 let btnReset = document.getElementById('C');
 
-
+btn0.addEventListener('click', function(){
+    display.innerHTML += btn0.value ;
+})
 btn1.addEventListener('click', function(){
     display.innerHTML += btn1.value ;
 })
@@ -64,10 +67,6 @@ btnOperazione.addEventListener('click', function(){
    display.innerText = eval(display.innerText);
    display.innerHTML = display.innerText;
     
-   
-  
-    
-     
 })
 
 btnReset.addEventListener('click', function(){

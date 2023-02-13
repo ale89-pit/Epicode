@@ -128,19 +128,19 @@ console.log(characters);
   CONSOLE LOG
 */
 
-    const femaleCharacters = [];
-    for (let i = 0; i < starWarsCharacters.length; i++){
-      if(starWarsCharacters[i].gender == 'female'){
-        femaleCharacters.push({
-          name : starWarsCharacters[i].name,
-          hair_color : starWarsCharacters[i].hair_color,
-          eye_color : starWarsCharacters[i].eye_color,
-        })
-      }
-    }
-    console.log(femaleCharacters)
-      
-    
+const femaleCharacters = [];
+for (let i = 0; i < starWarsCharacters.length; i++) {
+  if (starWarsCharacters[i].gender == 'female') {
+    femaleCharacters.push({
+      name: starWarsCharacters[i].name,
+      hair_color: starWarsCharacters[i].hair_color,
+      eye_color: starWarsCharacters[i].eye_color,
+    })
+  }
+}
+console.log(femaleCharacters)
+
+
 
 /* ESERCIZIO 4
   Crea un oggetto "eyeColor" che abbia come proprietà: blue, yellow, brown, red, blue-gray.
@@ -223,17 +223,17 @@ switch (true) {
   case (massaTotale > 700 && massaTotale < 900):
     console.log('Warning: load is over 700');
     break;
-case( massaTotale >900 && massaTotale <1000):
-console.log('Critical load: Over 900');
-break;
-case (massaTotale > 1000):
-console.log('DANGER! OVERLOAD ALERT: Jump ship now!');
+  case (massaTotale > 900 && massaTotale < 1000):
+    console.log('Critical load: Over 900');
+    break;
+  case (massaTotale > 1000):
+    console.log('DANGER! OVERLOAD ALERT: Jump ship now!');
 }
 /* ESERCIZIO 8
 Usa un for loop per cambiare il valore della proprietà "gender" di alcuni personaggi dal valore "n/a" a "robot" (Tip: puoi creare un nuovo array, o tentare la riassegnazione del valore corrispondente)
 CONSOLE LOG DELL'INTERO ARRAY
 */
-for (i = 0; i < starWarsCharacters.length; i++){
+for (i = 0; i < starWarsCharacters.length; i++) {
   if (starWarsCharacters[i].gender == 'n/a') {
     starWarsCharacters[i].gender = "Robot";
   }
@@ -252,11 +252,12 @@ Una volta fatto crea un conosle.log per controllare la proprietà length di "cha
 console.log(femaleCharacters);
 console.log(characters);
 
-for (i = 0; i < characters.length; i++){
-  for(j = 0; j < femaleCharacters.length; j++){
-    if(femaleCharacters[j].name == characters[i]){
-    characters.splice(i,1);
- } }
+for (i = 0; i < characters.length; i++) {
+  for (j = 0; j < femaleCharacters.length; j++) {
+    if (femaleCharacters[j].name == characters[i]) {
+      characters.splice(i, 1);
+    }
+  }
 }
 console.log(characters);
 /* EXTRA ESERCIZIO 10
@@ -266,10 +267,10 @@ Crea una funzionalità che prenda un elemento casuale dall'array "starWarsCharac
 
 console.log(random);
 
-for(i = 0; i < starWarsCharacters.length; i++){
+for (i = 0; i < starWarsCharacters.length; i++) {
   var random = Math.floor(Math.random() * starWarsCharacters.length);
   console.log(starWarsCharacters[random]);
 }
-  
- 
+
+
 

@@ -6,7 +6,7 @@ body {
 
 #container {
 
-background-color:azure;
+    background-color:azure;
     padding: 1em;
     width: fit-content;
     text-align: center;
@@ -24,7 +24,21 @@ background-color:azure;
     border-radius: 15px;
 
 }
-
+::-webkit-scrollbar {
+    height: 3px;
+  }
+::-webkit-scrollbar-track {
+    background: linear-gradient(to left, #800000 0%, #ff9900 100%);;    color:rgb(235, 208, 57);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f0f87c; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #f0f87c; 
+  }
 #cal {
     text-align: center;
 
@@ -81,6 +95,7 @@ p {
     color: white;
     text-align: right;
     font-size: 25px;
+    overflow :auto;
 }
 
 .buttonInvia {

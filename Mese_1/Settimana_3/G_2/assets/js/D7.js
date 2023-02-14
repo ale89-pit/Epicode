@@ -196,6 +196,12 @@ const movies = [
 /* ESERCIZIO 16
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
+const selectFilm = document.getElementById('selectFilm')
+window.addEventListener('load', function(){
+  for (i = 0; i < movies.length; i++){
+    selectFilm.innerHTML += `<option value='${movies[i].imdbID}'>'${movies[i].Title}'</option>`;
+  }
+})
 const btnRicerca = document.getElementById('ricerca');
 
 btnRicerca.addEventListener('click', function () {
@@ -218,11 +224,11 @@ btnRicerca.addEventListener('click', function () {
 function trova(ricerca) {
   for (i = 0; i < movies.length; i++) {
     if (ricerca == movies[i].imdbID) {
-      document.getElementById('title').innerHTML = movies[i].Title;
-      document.getElementById('Year').innerHTML = movies[i].Year;
-      document.getElementById('imdbID').innerHTML = movies[i].imdbID;
-      document.getElementById('Type').innerHTML = movies[i].Type;
-      document.getElementById('container').innerHTML += `<img src=${movies[i].Poster}" alt="poster del film">`
+      document.getElementById('title').innerHTML = `Titolo :${movies[i].Title}`;
+      document.getElementById('Year').innerHTML = `Anno :${movies[i].Year}`;
+      document.getElementById('imdbID').innerHTML =`ImdbID :${movies[i].imdbID}` ;
+      document.getElementById('Type').innerHTML =`Type: ${movies[i].Type}`;
+      document.getElementById('img').innerHTML = `<img src=${movies[i].Poster}" alt="poster del film">`
 
       return;
     }

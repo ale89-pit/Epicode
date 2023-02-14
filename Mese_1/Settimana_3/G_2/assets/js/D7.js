@@ -222,8 +222,7 @@ function trova(ricerca) {
       document.getElementById('Year').innerHTML = movies[i].Year;
       document.getElementById('imdbID').innerHTML = movies[i].imdbID;
       document.getElementById('Type').innerHTML = movies[i].Type;
-      
-      document.getElementById('container').innerHTML = `<img src=${movies[i].poster}" alt="poster del film">`
+      document.getElementById('container').innerHTML += `<img src=${movies[i].Poster}" alt="poster del film">`
 
       return;
     }
@@ -244,13 +243,13 @@ const btnRicerca2 = document.getElementById('ricerca2');
 var arraySearch = [];
 
 btnRicerca2.addEventListener('click', function () {
-  const search = document.getElementById('name').value;
+  const search = document.getElementById('name').value.toLowerCase();
   ricerca(search)
 })
 
 function ricerca(search) {
   for (i = 0; i < movies.length; i++) {
-    if (movies[i].Title.includes(search) == true) {
+    if (movies[i].Title.toLowerCase().includes(search) == true) {
       arraySearch.push(movies[i])
 
 

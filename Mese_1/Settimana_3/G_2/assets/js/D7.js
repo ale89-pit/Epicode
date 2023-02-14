@@ -266,7 +266,7 @@ function ricerca(search) {
 
 function scriviArray(arraySearch) {
   for (i = 0; i < arraySearch.length; i++) {
-    document.getElementById("risultati").innerHTML += `<h2>${arraySearch[i].Title}</h2><h3>${arraySearch[i].Year}</h3><h3>${arraySearch[i].imdbID}</h3><h3>${arraySearch[i].Type}</h3><img src="${arraySearch[i].Poster}" alt="poster del fiml"> `
+    document.getElementById("risultati").innerHTML +=  `<div class="movie"> <div><h2>Titolo: ${arraySearch[i].Title}</h2><h3>Anno: ${arraySearch[i].Year}</h3><h3>IMDB ID: ${arraySearch[i].imdbID}</h3><h3>Categoria: ${arraySearch[i].Type}</h3></div><img src="${arraySearch[i].Poster}" alt="poster del fiml"></div> `;
     
    
 

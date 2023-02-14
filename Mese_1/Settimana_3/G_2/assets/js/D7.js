@@ -5,7 +5,7 @@
 var stringa1 = 'ciao ciao ciao';
 var stringa2 = 'hello hello hello';
 
-nuovaStringa1 = stringa1.slice(0,2);
+nuovaStringa1 = stringa1.slice(0, 2);
 nuovaStringa2 = stringa2.slice(-3)
 var stringa3 = nuovaStringa1.concat(nuovaStringa2);
 console.log(stringa1);
@@ -198,36 +198,41 @@ const movies = [
 */
 const btnRicerca = document.getElementById('ricerca');
 
-btnRicerca.addEventListener('click',function(){
-    let ricerca = document.getElementById('selectFilm').value;
-    if (ricerca == ''){
-      document.getElementById('title').innerHTML = 'scegli almeno un film'
-      document.getElementById('Year').innerHTML = '';
-      document.getElementById('imdbID').innerHTML = '';
-      document.getElementById('Type').innerHTML = '';
-      document.getElementById('Poster').src = '';
-      return
-    }else if(ricerca !== '' ){
-      trova(ricerca)
-      return;
-    }
-    
-    }
+btnRicerca.addEventListener('click', function () {
+  let ricerca = document.getElementById('selectFilm').value;
+  if (ricerca == '') {
+    document.getElementById('title').innerHTML = 'scegli almeno un film'
+    document.getElementById('Year').innerHTML = '';
+    document.getElementById('imdbID').innerHTML = '';
+    document.getElementById('Type').innerHTML = '';
+    document.getElementById('Poster').src = '';
+    return
+  } else if (ricerca !== '') {
+    trova(ricerca)
+    return;
+  }
+
+}
 )
 
-function trova(ricerca){
-  for (i = 0; i < movies.length; i++){
-  if (ricerca == movies[i].imdbID){
+function trova(ricerca) {
+  for (i = 0; i < movies.length; i++) {
+    if (ricerca == movies[i].imdbID) {
       document.getElementById('title').innerHTML = movies[i].Title;
       document.getElementById('Year').innerHTML = movies[i].Year;
       document.getElementById('imdbID').innerHTML = movies[i].imdbID;
       document.getElementById('Type').innerHTML = movies[i].Type;
-      document.getElementById('poster').src = movies[i].Poster;
-      document.getElementById('container').innerHTML='<img src="${movies[i].poster}" alt="poster del fiml">'
+      
+      document.getElementById('container').innerHTML = `<img src=${movies[i].poster}" alt="poster del film">`
 
-    return;
+      return;
     }
-}}
+  }
+}
+
+
+
+
 /* ESERCIZIO 17
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
@@ -235,7 +240,33 @@ function trova(ricerca){
 /* ESERCIZIO 18 (EXTRA)
   Scrivi una funzione per recuperare tutti i film dall'array fornito che contengono una parola fornita.
 */
+const btnRicerca2 = document.getElementById('ricerca2');
+var arraySearch = [];
 
+btnRicerca2.addEventListener('click', function () {
+  const search = document.getElementById('name').value;
+  ricerca(search)
+})
+
+function ricerca(search) {
+  for (i = 0; i < movies.length; i++) {
+    if (movies[i].Title.includes(search) == true) {
+      arraySearch.push(movies[i])
+
+
+    }
+  }
+  scriviArray(arraySearch);
+}
+
+function scriviArray(arraySearch) {
+  for (i = 0; i < arraySearch.length; i++) {
+    document.getElementById("risultati").innerHTML += `<h2>${arraySearch[i].Title}</h2><h3>${arraySearch[i].Year}</h3><h3>${arraySearch[i].imdbID}</h3><h3>${arraySearch[i].Type}</h3><img src="${arraySearch[i].Poster}" alt="poster del fiml"> `
+    
+   
+
+  }
+}
 
 
 

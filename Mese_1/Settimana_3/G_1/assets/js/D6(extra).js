@@ -17,17 +17,21 @@ function giveMeRandom(n) {
     return array1;
 }
 console.log(giveMeRandom(6));
-function checkArray() {
-    
-        giveMeRandom(7).forEach(function (element) {
+function checkArray(n) {
+    let totale = 0
+        giveMeRandom(n).forEach(function (element) {
             if (element > 5) {
-                return ` il valore ${element} è maggiore di 5`
+                 totale += element;
+                console.log(` il valore ${element} è maggiore di 5`)
             } else {
-                return ` ${element} non è maggiore di 5`
+                console.log(` ${element} non è maggiore di 5`)
             }
+            console.log(totale);
         })
+        
     }
-    console.log(checkArray());
+    checkArray(7);
+    
     /* EXTRA 2
      Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
      Crea una funzione chiamata "shoppingCartTotal" che calcola il totale dovuto al negozio (tenendo conto delle quantità di ogni oggetto).
@@ -118,20 +122,50 @@ function checkArray() {
     */
 
     /* SCRIVI QUI LA TUA RISPOSTA */
-
-    /* EXTRA 6
+    function  latestShoppingCart(){
+        
+        return console.log(shoppingCart.pop());
+    } 
+    latestShoppingCart()    /* EXTRA 6
      Crea una funzione chiamata "loopUntil" che riceve un numero intero come parametro con valore tra 0 e 9.
      La funzione è composta da un ciclo che stampa un numero casuale tra 0 e 9 finchè il numero casuale non è maggiore di x per tre volte di fila.
     */
 
     /* SCRIVI QUI LA TUA RISPOSTA */
 
+     x = 6;
+     count = 0;
+    function loopUntil(){
+        while(count < 3){
+            let numero = (Math.floor(Math.random() * 10))
+            console.log(numero);
+            if (numero > x){
+                count +=1;
+            }else{
+                count = 0
+            }
+        }
+    }
+    //loopUntil();
     /* EXTRA 7
     Crea una funzione chiamata "average" che riceve un array come parametro e ne ritorna la media aritmetica. La funzione salta automaticamente i valori non numerici nell'array.
     */
 
     /* SCRIVI QUI LA TUA RISPOSTA */
-
+    var array4 = [25,54,10,16,7,5];
+    function average(array4){
+        var i = 0;
+        var sum = 0;
+        var arraylength = array4.length;
+        while (i < arraylength){
+            if (arraylength[i] = Number){
+            sum = sum + arraylength[i++];
+        }else{
+            arraylength[i++];
+        }
+        return  sum/arraylength;
+    }}
+    console.log(average(array4));
     /* EXTRA 8
      Crea una funzione chiamata "longest" che trova la stringa più lunga all'interno di un array di stringhe fornito come parametro.
     */

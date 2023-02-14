@@ -4,45 +4,98 @@
 */
 var stringa1 = 'ciao ciao ciao';
 var stringa2 = 'hello hello hello';
+function concat(stringa1, stringa2) {
+  stringa1 = stringa1.slice(0, 2);
+  stringa2 = stringa2.slice(-3)
+  var stringa3 = stringa1.concat(stringa2);
+  console.log(stringa3.toUpperCase());
+}
+concat(stringa1, stringa2);
 
-nuovaStringa1 = stringa1.slice(0, 2);
-nuovaStringa2 = stringa2.slice(-3)
-var stringa3 = nuovaStringa1.concat(nuovaStringa2);
-console.log(stringa1);
-console.log(stringa2);
-console.log(stringa3);
 /* ESERCIZIO 2
   Scrivi una funzione per creare un array di soli valori DISPARI da 1 a 100.
  */
-
-/*function numDisp(){
+function addDisp() {
   var array = [];
-  for (i = 0; i < array.length; i++) {
-  array.push((Math.floor(Math.random)*100)+1); 
+
+  for (i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+      array.push(i);
+
+    }
+  }
+  console.log(array);
 }
-return array;
-}
-console.log(array);*/
+addDisp();
+
+
 /* ESERCIZIO 3
   Scrivi una funzione per creare un array di soli valori multipli di 5, da 1 a 100.
  */
+function multFive() {
+  var array2 = []
+  for (i = 0; i < 100; i++) {
+    if (i % 5 == 0) {
+      array2.push(i);
+    }
+  }
+  console.log(array2);
+}
+
+
+multFive();
 
 /* ESERCIZIO 4
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
  */
+const arreyten = function(){
+  var array3 = [];
+  for (i = 0; i < 10; i++){
+   
+    array3.push(Math.floor((Math.random()*100)+1))
+  }
+  console.log(array3);
+}
+arreyten();
 
 /* ESERCIZIO 5
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
+const soloPari = function(n){
+  var arraypari = [];
+  for (i = 0; i < n.length;i++)
+  if (n[i] % 2 === 0){
+      arraypari.push(n[i]);
+  }
+  console.log(arraypari)
+}
 
+let arr = [25,12,42,55,103,99,45,75,20,56,88];
+soloPari(arr)
 /* ESERCIZIO 6
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
  */
 
+function sumArray(_n){
+  let sum = 0;
+  for(j = 0; j< arr.length;j++){
+    sum += arr[j];
+  }
+  console.log(sum);
+}
+sumArray(arr);
+
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
-
+function add(_n){
+  for(h = 0;h < arr.length;h++){
+    _n[h] += 1 
+  }
+  console.log(_n);
+}
+console.log(arr);
+add(arr);
 /* ESERCIZIO 8
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
@@ -197,8 +250,8 @@ const movies = [
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 const selectFilm = document.getElementById('selectFilm')
-window.addEventListener('load', function(){
-  for (i = 0; i < movies.length; i++){
+window.addEventListener('load', function () {
+  for (i = 0; i < movies.length; i++) {
     selectFilm.innerHTML += `<option value='${movies[i].imdbID}'>'${movies[i].Title}'</option>`;
   }
 })
@@ -226,8 +279,8 @@ function trova(ricerca) {
     if (ricerca == movies[i].imdbID) {
       document.getElementById('title').innerHTML = `Titolo :${movies[i].Title}`;
       document.getElementById('Year').innerHTML = `Anno :${movies[i].Year}`;
-      document.getElementById('imdbID').innerHTML =`ImdbID :${movies[i].imdbID}` ;
-      document.getElementById('Type').innerHTML =`Type: ${movies[i].Type}`;
+      document.getElementById('imdbID').innerHTML = `ImdbID :${movies[i].imdbID}`;
+      document.getElementById('Type').innerHTML = `Type: ${movies[i].Type}`;
       document.getElementById('img').innerHTML = `<img src=${movies[i].Poster}" alt="poster del film">`
 
       return;
@@ -266,9 +319,9 @@ function ricerca(search) {
 
 function scriviArray(arraySearch) {
   for (i = 0; i < arraySearch.length; i++) {
-    document.getElementById("risultati").innerHTML +=  `<div class="movie"> <div><h2>Titolo: ${arraySearch[i].Title}</h2><h3>Anno: ${arraySearch[i].Year}</h3><h3>IMDB ID: ${arraySearch[i].imdbID}</h3><h3>Categoria: ${arraySearch[i].Type}</h3></div><img src="${arraySearch[i].Poster}" alt="poster del fiml"></div> `;
-    
-   
+    document.getElementById("risultati").innerHTML += `<div class="movie"> <div><h2>Titolo: ${arraySearch[i].Title}</h2><h3>Anno: ${arraySearch[i].Year}</h3><h3>IMDB ID: ${arraySearch[i].imdbID}</h3><h3>Categoria: ${arraySearch[i].Type}</h3></div><img src="${arraySearch[i].Poster}" alt="poster del fiml"></div> `;
+
+
 
   }
 }

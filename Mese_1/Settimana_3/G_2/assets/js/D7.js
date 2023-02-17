@@ -100,7 +100,19 @@ add(arr);
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
+const countString = (_arr) =>{
+  let nuovo = []
+  
+      
+     for (i = 0;i < _arr.length;i++){
+        nuovo.push(_arr[i].length);
+     }
+console.log(nuovo)
 
+}
+
+var lett = ['la notte non si dorme']
+countString(lett);
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
 */

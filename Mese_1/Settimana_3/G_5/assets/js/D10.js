@@ -492,7 +492,7 @@ tree(3);
 /* ESERCIZIO 29
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
-Davide Marchica — Oggi alle 17:09
+
 var conta=0
 function isItPrime(_p){
 while(conta <=1 && div <= n/2){

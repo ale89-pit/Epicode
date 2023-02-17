@@ -493,15 +493,7 @@ tree(3);
   Crea una funzione chiamata "isItPrime" che riceve un numero come parametro e ritorna true se il numero fornito è un numero primo.
 */
 
-var conta=0
-function isItPrime(_p){
-while(conta <=1 && div <= n/2){
-  if(n%div -- 0){
-    conta++;
-  }
-  div++;
-}
-}
+
  
 /* Questo array viene usato per gli esercizi. Non modificarlo. */
 

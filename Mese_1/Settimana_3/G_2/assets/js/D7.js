@@ -1,7 +1,7 @@
 /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
-*/
+*/console.log('Esercizio 1');
 var stringa1 = 'ciao ciao ciao';
 var stringa2 = 'hello hello hello';
 function concat(stringa1, stringa2) {
@@ -15,6 +15,7 @@ concat(stringa1, stringa2);
 /* ESERCIZIO 2
   Scrivi una funzione per creare un array di soli valori DISPARI da 1 a 100.
  */
+  console.log('Esercizio 2');
 function addDisp() {
   var array = [];
 
@@ -32,6 +33,7 @@ addDisp();
 /* ESERCIZIO 3
   Scrivi una funzione per creare un array di soli valori multipli di 5, da 1 a 100.
  */
+  console.log('Esercizio 3');
 function multFive() {
   var array2 = []
   for (i = 0; i < 100; i++) {
@@ -48,6 +50,7 @@ multFive();
 /* ESERCIZIO 4
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
  */
+  console.log('Esercizio 4');
 const arreyten = function(){
   var array3 = [];
   for (i = 0; i < 10; i++){
@@ -61,6 +64,7 @@ arreyten();
 /* ESERCIZIO 5
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici.
  */
+  console.log('Esercizio 5');
 const soloPari = function(n){
   var arraypari = [];
   for (i = 0; i < n.length;i++)
@@ -75,7 +79,7 @@ soloPari(arr)
 /* ESERCIZIO 6
   Scrivi una funzione per sommare a catena i numeri contenuti in un array.
  */
-
+  console.log('Esercizio 6');
 function sumArray(_n){
   let sum = 0;
   for(j = 0; j< arr.length;j++){
@@ -88,6 +92,7 @@ sumArray(arr);
 /* ESERCIZIO 7
   Scrivi una funzione per incrementare di 1 tutti i valori numerici in un array.
 */
+console.log('Esercizio 7');
 function add(_n){
   for(h = 0;h < arr.length;h++){
     _n[h] += 1 
@@ -100,23 +105,38 @@ add(arr);
   Sostituisci ogni stringa contenuta in un array con un numero rappresentante la sua lunghezza.
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
 */
-const countString = (_arr) =>{
-  let nuovo = []
-  
+console.log('Esercizio 8');
+var nuovo = []
+const countString = (_string) =>{
+ nuovo = _string.split(' ')
+  let count =[]
       
-     for (i = 0;i < _arr.length;i++){
-        nuovo.push(_arr[i].length);
+     for (i = 0;i < nuovo.length;i++){
+      
+        count.push(nuovo[i].length);
+        
      }
-console.log(nuovo)
+console.log(count)
 
 }
 
-var lett = ['la notte non si dorme']
+var lett = 'la notte non si dorme'
+
 countString(lett);
 /* ESERCIZIO 9 (EXTRA)
   Scrivi una funzione per eliminare solo i valori PARI da un array.
 */
+console.log('Esercizio 9');
+const soloPariDel = function(n){
+  
+  for (i = 0; i < n.length;i++)
+  if (n[i] % 2 === 0){
+    n.splice(i, 1);
+  }
+  console.log(n)
+}
 
+soloPariDel(arr)
 /* ESERCIZIO 10 (EXTRA)
   Scrivi una funzione per creare un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 10 (incluso), SENZA AMMETTERE DUPLICATI.
  */

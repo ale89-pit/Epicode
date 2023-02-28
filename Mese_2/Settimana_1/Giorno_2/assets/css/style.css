@@ -61,32 +61,42 @@ section h2 {
 }
 
 .up {
-  width: 50px;
-  height: 86;
+  width: 63px;
+  height: 60px;
   position: fixed;
   z-index: 6;
   bottom: 2px;
   right: 3px;
   padding: 7px;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgba(201, 201, 201, 0.8);
 
   border: 2px solid white;
-  color: blue;
+  text-align: center;
   font-size: 30px;
   border-radius: 10px;
 
 }
 
+.fa-calendar,
+.fa-plus {
+  color: blue;
+}
+
+.fa-caret-square-up {
+  color: red;
+}
+
 .calen {
-  width: 50px;
-  height: 86;
+  width: 63px;
+  height: 60px;
   position: fixed;
   bottom: 81px;
   right: 3px;
   padding: 7px;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgba(201, 201, 201, 0.8);
   border: 2px solid white;
-  color: red;
+  text-align: center;
+
   font-size: 30px;
   z-index: 6;
   border-radius: 10px;
@@ -99,18 +109,20 @@ section h2 {
 }
 
 .social {
-  width: 50px;
-  height: 86;
+  width: 63px;
+  height: 60px;
   position: fixed;
   bottom: 162px;
   right: 3px;
   padding: 7px;
-  background-color: rgb(255, 255, 255, 0.6);
+  background-color: rgba(201, 201, 201, 0.8);
   border: 2px solid white;
-  color: red;
+
   font-size: 30px;
   z-index: 6;
   border-radius: 10px;
+  text-align: center;
+
 }
 
 .card {
@@ -200,33 +212,37 @@ main {
   }
 
   .social {
-    width: 50px;
-    height: 86px;
+    width: 63px;
+    height: 63px;
     position: absolute;
     top: 0px;
     right: 3px;
     padding: 7px;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: rgba(201, 201, 201, 0.8);
     border: 2px solid white;
-    color: red;
+
     font-size: 30px;
     z-index: 6;
     border-radius: 10px;
+    text-align: center;
+
   }
 
   .calen {
-    width: 50px;
-    height: 86px;
+    width: 63px;
+    height: 63px;
     position: absolute;
     top: 90px;
     right: 3px;
     padding: 7px;
-    background-color: rgb(255, 255, 255, 0.6);
+    background-color: rgba(201, 201, 201, 0.8);
     border: 2px solid white;
-    color: red;
+
     font-size: 30px;
     z-index: 6;
     border-radius: 10px;
+    text-align: center;
+
   }
 }
 
@@ -435,6 +451,19 @@ button {
   border: 0;
   color: white;
   font-weight: bold;
+}
+
+.card {
+  position: relative;
+}
+
+.fa-tag:before {
+  content: "\f02b";
+  position: absolute;
+  top: 5%;
+  right: 6%;
+  opacity: 0.3;
+  font-size: 80px;
 }
 
 @media screen and (min-width: 500px) {

@@ -301,7 +301,8 @@ aside {
     }
 
     ul li {
-        width: 90%;
+        width: 70%;
+        padding: 2.5em 1em;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -310,7 +311,7 @@ aside {
 
 
     .card {
-        width: 213px;
+        width: 185px;
 
 
         border-top-left-radius: 3em;
@@ -346,12 +347,12 @@ aside {
     }
 
 
-    /*
+
     .logo {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        width: 60%;
+        /*    width: 60%;
     }
     .card {
         width: 310px;
@@ -378,4 +379,4 @@ aside {
     }
 
     */
-}
+    }

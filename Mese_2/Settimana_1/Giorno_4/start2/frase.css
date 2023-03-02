@@ -7,4 +7,110 @@
 6 animare le altre 2 parole
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
+#testoAlternato {
+    width: 60%;
+    margin: 2em auto;
+    border: 2px solid grey;
+    padding: 1em;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 1.5em;
 
+}
+
+.parole {
+    color: rgb(43, 64, 136);
+
+
+
+}
+
+i {
+
+    position: absolute;
+
+
+}
+
+.primo {
+    opacity: 0;
+    transform: translate(10px, -100%);
+    animation: dissolvenza 9s infinite;
+
+
+}
+
+.secondo {
+
+    opacity: 0;
+    transform: translate(10px, -100%);
+    animation: dissolvenza 9s 3s infinite;
+
+
+}
+
+.terzo {
+
+    opacity: 0;
+    transform: translate(10px, -100%);
+    animation: dissolvenza 9s 6s infinite;
+
+
+}
+
+@keyframes dissolvenza {
+    0% {
+        opacity: 0;
+
+    }
+
+    40% {
+        opacity: 0;
+        transform: translate(10px, -100%);
+
+
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(10px, 0);
+
+
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate(10px, 0);
+
+    }
+
+    80% {
+        opacity: 0;
+        transform: translate(10px, 100%);
+    }
+
+
+
+    100% {
+        opacity: 0;
+        transform: translate(10px, 100%);
+
+    }
+}
+
+
+
+@keyframes fadein {
+
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,300;1,400;1,500;1,600&family=Spectral:wght@200;300;500;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400;500;600;700&family=Shantell+Sans:ital,wght@1,300;1,400;1,500;1,600&family=Spectral:wght@200;300;500;600;800&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Spectral', serif;
+
+}
+
+.backYellow {
+    background-color: #ffc017;
+    border-bottom: 1px solid black;
+
+}
+
+
+.stiky {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+}
+
+nav {
+
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.animationNav {
+    background-color: white !important;
+}
+
+.btnChange {
+    background-color: #1a8917 !important;
+}
+
+
+
+
+button:hover {
+    cursor: pointer;
+}
+
+#menu,
+#menu ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7em;
+    list-style: none;
+}
+
+#menu ul li {
+    margin: 0.7em;
+    font-size: 0.9em;
+    font-weight: 300;
+}
+
+.button {
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    padding: 0.7em 1.2em;
+
+}
+
+article {
+    width: 100%;
+    margin: 0 auto;
+    height: 450px;
+    display: flex;
+
+    align-items: center;
+}
+
+.title {
+    width: 100%;
+    margin: 0 0 0 15%;
+
+}
+
+.title h2 {
+    font-size: 100px;
+    margin-bottom: 0.5em;
+}
+
+.title h3 {
+    font-size: 24px;
+    margin-bottom: 2em;
+}
+
+.button2 {
+    margin-bottom: 1em;
+    padding: 0.4em 2.5em;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#svgM {
+    width: 80%;
+    position: relative;
+    right: -2%;
+
+}
+
+#svgM svg {
+    max-width: 588px;
+    min-width: 588px;
+}
+
+aside {
+    width: 100%;
+    height: 420px;
+    border-bottom: 1px solid grey;
+    font-family: 'Roboto Mono', monospace;
+}
+
+aside>div {
+    display: flex;
+    align-items: center;
+
+    width: 70%;
+    margin: 2em auto 0 auto;
+}
+
+aside svg {
+    margin: 0;
+}
+
+.aside {
+    margin: 0 auto;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aside h2 {
+    width: 100%;
+}
+
+.card {
+    margin: 1em 1.5em;
+
+    width: 350px;
+    height: 100px;
+    display: flex;
+
+}
+
+.number {
+    width: 15%;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.5;
+    margin-top: 0.3em;
+}
+
+.fotoname {
+    width: 100%;
+    display: flex;
+    height: 20%;
+    align-items: center;
+    margin-right: 0.5em;
+    margin-top: 0.5em;
+
+}
+
+.fotoname img {
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 0.3em;
+}
+
+.section {
+    width: 100%;
+}
+
+.section div:last-of-type {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section h4 {
+    width: 100%;
+    font-size: 16px;
+    margin: 1em 0;
+    font-weight: 600;
+}
+
+.section h2 {
+    width: 100%;
+    font-size: 13px;
+}
+
+span {
+    color: gray;
+    opacity: 0.6;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.news {
+    padding: 2em;
+    width: 100%;
+    display: flex;
+}
+
+.article {
+    width: 65%;
+}
+
+
+
+.card2 {
+    margin: 2em auto;
+    width: 60%;
+    height: 150px;
+    display: flex;
+
+}
+
+.card2 h4 {
+    font-weight: 800;
+
+}
+
+.parag {
+    margin-bottom: 0.8em;
+}
+
+
+.newsFoto {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.newsFoto img {
+    max-width: 100%;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 30%;
+}
+
+.stiky2 {
+    position: sticky;
+    top: 80px;
+    z-index: 1;
+}
+
+.stiky2 h4 {
+    text-align: center;
+}
+
+.htex {
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn {
+    padding: 0.5em;
+    margin: 0.2em;
+    border: 1px solid rgb(192, 192, 192);
+    color: grey;
+
+}
+
+.utili a {
+    color: grey;
+    margin: 0.5em;
+}

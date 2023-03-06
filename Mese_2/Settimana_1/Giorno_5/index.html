@@ -5663,17 +5663,29 @@
     <script>
         let nav = document.getElementById('navbar')
         let btn = document.querySelectorAll('button')
-        let scrol = document.querySelector('article')
+        let scrol = document.querySelector('nav')
         console.log(nav);
         console.log(btn);
         console.log(scrol);
 
-        nav.addEventListener("scroll", function () {
-            console.log(event)
-            nav.classList.add('animationNav');
+        top.addEventListener("scroll", () => {
 
-            btn.classList.add('btnChange');
+            if (document.documentElement.scrollTop > 250) {
+                nav.classList.add('animationNav');
+                btn[0].classList.add('btnChange');
+                btn[1].classList.add('btnChange');
+            } else {
+                nav.classList.remove('animationNav');
+                btn[0].classList.remove('btnChange');
+                btn[1].classList.remove('btnChange');
+                nav.classList.add('return');
+                btn[0].classList.add('returnbtn');
+                btn[1].classList.add('returnbtn');
+
+            }
         })
+
+
     </script>
 </body>
 

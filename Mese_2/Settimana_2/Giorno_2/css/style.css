@@ -1,0 +1,51 @@
+.navbar-brand img {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+}
+
+body {
+    padding: 0;
+}
+
+
+.img {
+
+    height: 150px;
+}
+
+@media screen and (max-width:480px) {
+    .img {
+        height: 100px;
+    }
+}
+
+.img-offer {
+    height: 100px;
+}
+
+@media screen and (min-width:480px) {
+    .img-offer {
+        height: auto;
+    }
+}
+
+@media screen and (min-width:1020px) {
+    .img-offer {
+        height: 300px;
+    }
+}
+
+p {
+    font-size: 0.8em;
+}
+
+.button-size {
+    font-size: 12px;
+    padding: 0.3em 0.6em;
+    margin-bottom: 1em;
+}
+
+.visibility {
+    display: none;
+}

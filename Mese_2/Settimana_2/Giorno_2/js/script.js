@@ -15,3 +15,10 @@ const travelCount = function () {
   alert(`Il conto dei viaggi è ${travel.length}`);
 };
 //travelCount();
+let hot = document.querySelectorAll(".card>p");
+console.log(hot);
+for (let i = 0; i < hot.length; i++) {
+  if (hot[i].classList.contains("visibility")) {
+    hot[i].classList.remove("visibility");
+  }
+}

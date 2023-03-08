@@ -144,17 +144,63 @@ console.log(filter);
     Utilizza il metodo .map() sull'array cars in modo da ottenere un nuovo array in cui sono presenti
     stringhe formate nel seguente modo: "Ford Fiesta", "Peugeot 208" etc.
 */
-
+const newArray = cars.map((car) => car.brand + " " + car.model);
+console.log(newArray);
 /* ESERCIZIO 13
     Utilizza un ciclo while per stampare in console i valori del seguente array numerico fino al raggiungimento del numero 32.
 */
 const numericArray = [
   6, 90, 45, 75, 84, 98, 35, 74, 31, 2, 8, 23, 100, 32, 66, 313, 321, 105,
 ];
+let n = 0;
 
+while (numericArray[n] !== 32) {
+  console.log(numericArray[n]);
+  n++;
+}
 /* ESERCIZIO 14
     Partendo dall'array fornito e utilizzando un costrutto switch, genera un nuovo array composto dalle posizioni di ogni carattere all'interno
     dell'alfabeto italiano.
     es. [f, b, e] --> [6, 2, 5]
 */
 const charactersArray = ["g", "n", "u", "z", "d"];
+
+const alfabet = [
+  "a",
+  "b",
+  "c",
+  "d",
+  "e",
+  "f",
+  "g",
+  "h",
+  "i",
+  "l",
+  "m",
+  "n",
+  "o",
+  "p",
+  "q",
+  "r",
+  "s",
+  "t",
+  "u",
+  "v",
+  "z",
+];
+const position = [];
+const countLetter = () => {
+  for (i = 0; i < charactersArray.length; i++) {
+    for (j = 0; j < alfabet.length; j++) {
+      switch (charactersArray[i] === alfabet[j]) {
+        case true:
+          position.push(j + 1);
+          break;
+      }
+    }
+  }
+  console.log(charactersArray);
+  console.log(position);
+};
+
+countLetter();

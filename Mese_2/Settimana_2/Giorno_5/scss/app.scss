@@ -1,0 +1,93 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+body{
+    background-color: black;
+    color:white
+}
+
+.container{
+    margin: 50px 0;
+}
+.row{
+    width: 100%;
+    
+}
+#logo{
+    width: 100%;
+}
+#list{
+    ul{
+        li{
+            margin: 0 0.5em;
+        }
+    }
+}
+
+nav{
+    .row{
+
+    
+        
+        align-items: center;
+        
+        }
+        button{
+            background-color: black;
+        }
+    }
+    i{
+        margin: 0 0.5em;
+    }
+#profile{
+    width: 50px;
+    background-image: url("http://placekitten/50");
+}
+select{
+    height: 30px;
+    width: 150px;
+    background-color: black;
+    color: $white;
+}
+#film{
+    .row{
+        margin-bottom: 4em;
+    }
+    img{
+        width: 14%;
+    }
+    img:hover{
+        transform: scale(1,1);
+    }
+}
+a{
+    text-decoration: none;
+    color: $white;
+    font-size: 0.6em;
+    text-align: start;
+    margin-bottom: 1em;
+}
+$small-font-size:0.6em;
+footer{
+    .col{
+        margin-bottom: 1em;
+    }
+    address{
+        p{
+            font-size: $small-font-size ;
+        }
+    }
+    
+}
+
+#maturity {
+    font-size:0.75em;
+    font-weight: $font-weight-bold;
+    p:last-of-type{
+        font-size: 0.5em;
+    }
+}
+#maturity p:last-of-type {
+    font-size: 0.5em !important;
+  }
+.center{
+    margin: 0 auto;
+}

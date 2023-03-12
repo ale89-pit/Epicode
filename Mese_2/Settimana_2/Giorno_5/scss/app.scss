@@ -12,52 +12,43 @@ body{
     
 }
 #logo{
-    width: 100%;
-}
-#list{
-    ul{
-        li{
-            margin: 0 0.5em;
-        }
-    }
+    width: 5em;
 }
 
-nav{
-    .row{
-
-    
-        
-        align-items: center;
-        
-        }
-        button{
-            background-color: black;
-        }
-    }
-    i{
-        margin: 0 0.5em;
-    }
-#profile{
-    width: 50px;
-    background-image: url("http://placekitten/50");
-}
-select{
+.geners{
     height: 30px;
-    width: 150px;
-    background-color: black;
-    color: $white;
 }
+.imgkids{
+    width: 25px;
+}
+
+
+
 #film{
     .row{
+        
         margin-bottom: 4em;
+        .col{
+            
+        padding: 0;
+        margin:0
+        }
     }
+   
     img{
-        width: 14%;
+        width: 100%;
+        height: 150px;
     }
     img:hover{
-        transform: scale(1,1);
+        transform: scale(1.2);
+        transition: all 0.2s;
     }
 }
+footer,.center{
+    width: 50%;
+         margin: 0 auto;
+     }
+
 a{
     text-decoration: none;
     color: $white;
@@ -65,29 +56,13 @@ a{
     text-align: start;
     margin-bottom: 1em;
 }
-$small-font-size:0.6em;
-footer{
-    .col{
-        margin-bottom: 1em;
-    }
-    address{
-        p{
-            font-size: $small-font-size ;
-        }
-    }
-    
-}
+
 
 #maturity {
-    font-size:0.75em;
-    font-weight: $font-weight-bold;
-    p:last-of-type{
-        font-size: 0.5em;
+    
+    p{
+        font-size: 0.75em;
     }
 }
-#maturity p:last-of-type {
-    font-size: 0.5em !important;
-  }
-.center{
-    margin: 0 auto;
-}
+
+

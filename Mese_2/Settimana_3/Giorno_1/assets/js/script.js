@@ -35,6 +35,9 @@ let inputBreed = document.getElementById("inputBreed");
 let invia = document.getElementById("invia");
 let petList = document.getElementById("petList");
 let petArray = [];
+let firstNumber = document.getElementById("firstNumber");
+let secondNumber = document.getElementById("secondNumber");
+let comparebutton = document.getElementById("compare");
 
 class Pet {
   constructor(_petName, _ownerName, _species, _breed) {
@@ -43,8 +46,8 @@ class Pet {
     this.species = _species;
     this.breed = _breed;
   }
-  sameOwne(x) {
-    if (this.ownerName === x.ownerName) {
+  sameOwne(x, y) {
+    if (y.ownerName === x.ownerName) {
       return true;
     } else {
       return false;
@@ -57,13 +60,27 @@ const writePet = () => {
   petArray.forEach((pet) => {
     const newLi = document.createElement("li");
     newLi.innerText =
-      pet.petName + " " + pet.ownerName + " " + pet.species + " " + pet.breed;
+      "Nome pet:" +
+      " " +
+      pet.petName +
+      "," +
+      "Owner name : " +
+      " " +
+      pet.ownerName +
+      ", " +
+      "Species : " +
+      " " +
+      pet.species +
+      " ," +
+      "Breed " +
+      " " +
+      pet.breed;
+
     petList.appendChild(newLi);
   });
 };
 
 invia.addEventListener("click", () => {
-  console.log("bottone cliccato");
   let newPet = new Pet(
     inputName.value,
     inputOwner.value,
@@ -79,4 +96,3 @@ invia.addEventListener("click", () => {
   inputSpecies.value = "";
   inputBreed.value = "";
 });
-petArray[0].sameOwne(petArray[1]);

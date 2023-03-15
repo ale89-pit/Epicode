@@ -10,12 +10,19 @@ btnReset.addEventListener("click", function () {
   let local = localStorage.getItem("nomi")
     ? JSON.parse(localStorage.getItem("nomi"))
     : [];
-  console.log(local);
-  local.pop();
-  console.log(local);
 
-  localStorage.setItem("nomi", JSON.stringify(local));
-  writeName();
+  if (local.length == 0) {
+    alert("non ci sono elementi da eliminare");
+  } else if (local.length === 1) {
+    alert("Stai eliminando l'ultimo record");
+
+    writeName();
+  } else {
+    local.pop();
+
+    localStorage.setItem("nomi", JSON.stringify(local));
+    writeName();
+  }
 });
 
 saveUser.addEventListener("submit", (event) => {
@@ -35,19 +42,34 @@ saveUser.addEventListener("submit", (event) => {
 
 const writeName = function () {
   listRef.innerHTML = "";
-  let name = [];
+
   let savedName = localStorage.getItem("nomi");
   if (savedName) {
-    name = JSON.parse(savedName);
+    arrayName = JSON.parse(savedName);
   }
-  name.forEach((element) => {
+  if (arrayName.length === 1) {
     let newLi = document.createElement("li");
-    newLi.innerText = element.name;
-
+    newLi.innerText = arrayName[0].name;
+    console.log(arrayName[0].name);
     listRef.appendChild(newLi);
-  });
+  } else {
+    let lastName = arrayName.pop();
+    console.log(lastName);
+    let newLi = document.createElement("li");
+    newLi.innerText = lastName.name;
+    listRef.appendChild(newLi);
+  }
+  //   name.forEach((element) => {
+  //     let newLi = document.createElement("li");
+
+  //     newLi.innerText = element.name;
+
+  //     listRef.appendChild(newLi);
+  //   });
 };
 writeName();
+let minutiRef = document.getElementById("minuti");
+let secondiRef = document.getElementById("secondi");
 
 let timer = function () {
   let secondi = sessionStorage.getItem("secondi") || 0;
@@ -55,9 +77,15 @@ let timer = function () {
 
   setInterval(function () {
     secondi++;
-
+    if (secondi == 60) {
+      minuti++;
+      secondi = 0;
+    }
     sessionStorage.setItem("secondi", secondi.toString());
-    console.log(secondi);
+    sessionStorage.setItem("minuti", minuti.toString());
+
+    minutiRef.innerHTML = minuti;
+    secondiRef.innerHTML = secondi;
   }, 1000);
 };
 

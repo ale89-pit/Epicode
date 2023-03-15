@@ -59,6 +59,18 @@ const addCart = function (id) {
       local.push({ Title: title, Price: price });
 
       localStorage.setItem("book", JSON.stringify(local));
+      addBook();
     }
   });
 };
+let bookRef = document.getElementById("bookList");
+const addBook = function () {
+  let bookSave = localStorage.getItem("book");
+  console.log(bookSave);
+  bookSave = JSON.parse(bookSave);
+  console.log(bookSave);
+  bookSave.forEach((element) => {
+    bookRef.innerHTML += `<p class="text-bg-dark">${element.Title}&nbsp<span>${element.Price}€</span></p>`;
+  });
+};
+addBook();

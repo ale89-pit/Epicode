@@ -1,0 +1,33 @@
+.container a {
+    font-size: 0.65em;
+}
+
+.container img {
+    width: 150px;
+    aspect-ratio: 3/2;
+}
+
+.container .btn {
+    width: 140px;
+}
+
+#invia,
+#modifica,
+#delete {
+    width: 15%;
+    font-size: 0.8em;
+}
+
+#details-container img {
+    width: 100%;
+    aspect-ratio: 3/3;
+}
+
+#closeModal,
+#saveChange {
+    font-size: 0.8em;
+}
+
+#saveChange {
+    width: 120px;
+}

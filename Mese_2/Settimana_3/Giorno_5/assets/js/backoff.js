@@ -66,8 +66,12 @@ const saveProd = async function (newProd) {
     alert("Qualcosa è andato storto");
   }
 };
-
+const controlDel = function () {
+  modalText.innerHTML = `<p>Sei Sicuro di voler eliminare questo prodotto<br>
+    QUESTA AZIONE ELIMINERA' DEFINIVAMENTE IL PRODOTTO!!</p>`;
+};
 const deleteProd = async function () {
+  //controlDel()
   let response = await fetch(URLREQ + idRef, {
     method: "DELETE",
     headers: {
@@ -77,8 +81,7 @@ const deleteProd = async function () {
   });
   console.log("eliminato");
   if (response.ok) {
-    modalText.innerHTML = `<p>Sei Sicuro di voler eliminare questo prodotto<br>
-    QUESTA AZIONE ELIMINERA' DEFINIVAMENTE IL PRODOTTO!!</p>`;
+    modalText.innerHTML = `<p>Prodotto Eliminato</p>`;
   } else {
     alert("PROBLEMA NELL'ELIMINAZIONE DELL'EVENTO");
   }

@@ -62,16 +62,16 @@
                     </div>
                     <div class="mb-3">
                         <label for="price" class="form-label">Price</label>
-                        <input type="number" class="form-control" id="price" placeholder="Insert the production price"
-                            required />
+                        <input type="number" class="form-control" id="price" step="any"
+                            placeholder="Insert the production price" required />
                     </div>
 
                     <button id="invia" type="submit" class="btn btn-primary d-none" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">INVIA</button>
-                    <button id="modifica" onclick="saveProd()" class="btn btn-primary d-none" data-bs-toggle="modal"
+                    <button id="modifica" class="btn btn-primary d-none" data-bs-toggle="modal"
                         data-bs-target="#exampleModal">MODIFCA</button>
-                    <button id="delete" type="button" class="btn btn-danger d-none" onclick="deleteProd()"
-                        data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <button id="delete" type="button" class="btn btn-danger d-none" onclick="" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
                             class="bi bi-trash3" viewBox="0 0 16 16">
                             <path
@@ -84,7 +84,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">Complimenti</h1>
+                                <h1 class="modal-title fs-5" id="modalLabel"></h1>
                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                     aria-label="Close"></button>
                             </div>
@@ -92,10 +92,14 @@
                                 ...
                             </div>
                             <div class="modal-footer d-flex justify-content-between">
-                                <button id="closeModal" type="button" class="btn btn-secondary d-none"
+                                <button id="closeModal" type="button" class="btn btn-secondary"
                                     data-bs-dismiss="modal">Close</button>
-                                <button id="saveChange" type="button" onclick="window.location.replace('./index.html')"
-                                    class="btn btn-primary">Save changes</button>
+                                <button id="deleteModal" type="button" class="btn btn-danger d-none"
+                                    data-bs-dismiss="modal" aria-label="Close">Cancel
+                                </button>
+                                <button id="saveChange" type="button" class="btn btn-primary d-none"
+                                    data-bs-dismiss="modal" aria-label="Close">Save
+                                    changes</button>
                             </div>
                         </div>
                     </div>

@@ -6,6 +6,10 @@ let btnDelete = document.getElementById("delete");
 let btnModifica = document.getElementById("modifica");
 let btnInvia = document.getElementById("invia");
 let modalText = document.getElementById("textModal");
+let saveChange = document.getElementById("saveChange");
+let deleteModal = document.getElementById("deleteModal");
+let newProd;
+let titleModal = document.getElementById("modalLabel");
 console.log(modalText);
 console.log(btnDelete);
 if (idRef) {
@@ -38,7 +42,7 @@ if (idRef) {
 }
 formRef.addEventListener("submit", (e) => {
   e.preventDefault();
-  let newProd = {
+  newProd = {
     name: document.getElementById("name").value,
     description: document.getElementById("description").value,
     brand: document.getElementById("brand").value,
@@ -46,8 +50,12 @@ formRef.addEventListener("submit", (e) => {
     price: document.getElementById("price").value,
   };
   console.log(newProd);
-  saveProd(newProd);
 });
+//Prova per modal
+// myModal.addEventListener("shown.bs.modal", function () {
+//   myInput.focus();
+//   console.log(myInput);
+// });
 
 const saveProd = async function (newProd) {
   let url = idRef ? URLREQ + idRef : URLREQ;
@@ -61,15 +69,11 @@ const saveProd = async function (newProd) {
     },
   });
   if (response.ok) {
-    modalText.innerHTML = `<p>Prodotto salvato correttamente</p>`;
   } else {
     alert("Qualcosa è andato storto");
   }
 };
-const controlDel = function () {
-  modalText.innerHTML = `<p>Sei Sicuro di voler eliminare questo prodotto<br>
-    QUESTA AZIONE ELIMINERA' DEFINIVAMENTE IL PRODOTTO!!</p>`;
-};
+
 const deleteProd = async function () {
   //controlDel()
   let response = await fetch(URLREQ + idRef, {
@@ -81,8 +85,34 @@ const deleteProd = async function () {
   });
   console.log("eliminato");
   if (response.ok) {
-    modalText.innerHTML = `<p>Prodotto Eliminato</p>`;
+    modalText.innerHTML = `<p>Prodotto eliminato correttamente</p>`;
   } else {
     alert("PROBLEMA NELL'ELIMINAZIONE DELL'EVENTO");
   }
 };
+btnInvia.addEventListener("click", function () {
+  titleModal.innerHTML = "AGGIUNGERE QUESTO PRODOTTO ALLA LISTA?";
+  modalText.innerHTML = `<p>conferma per aggiungerre il prodotto o annulla</p>`;
+  saveChange.classList.remove("d-none");
+});
+btnModifica.addEventListener("click", function () {
+  titleModal.innerHTML = "MODFICARE QUESTO PRODOTTO?";
+  modalText.innerHTML = `<p>conferma per modificare il prodotto o annulla.Questa azione modifichera l'articolo in maniera definitiva.Confermare??</p>`;
+  saveChange.classList.remove("d-none");
+});
+btnDelete.addEventListener("click", function () {
+  titleModal.innerHTML = "ELIMINARE QUESTO PRODOTTO?";
+  modalText.innerHTML = `<p>ATTENZIONE L'AZIONE ELIMINERA' DEFINITIVAMENTE IL PRODOTTO</p>`;
+  deleteModal.classList.remove("d-none");
+});
+saveChange.addEventListener("click", function () {
+  console.log("hai cliccato", saveChange);
+
+  saveProd();
+  window.location.replace("./index.html");
+});
+
+deleteModal.addEventListener("click", function () {
+  deleteProd();
+  window.location.replace("./index.html");
+});

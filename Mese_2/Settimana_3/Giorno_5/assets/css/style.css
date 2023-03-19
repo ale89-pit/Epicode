@@ -1,21 +1,92 @@
-.container a {
-    font-size: 0.65em;
+body {
+    background-color: rgb(238, 183, 97);
+    font-size: 1.5em;
 }
 
-.container img {
-    width: 150px;
+#hero {
+    width: 100%;
+    aspect-ratio: 1/1;
+    background-image: url('https://www.tecnomat.it/pub/media/cms/herobanner_idropittura_marzo_2023_desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+}
+
+#hero .row {
+    height: 100%;
+}
+
+h1 {
+    color: rgb(245, 125, 49)
+}
+
+@media screen and (min-width:461px) {
+    #hero {
+        aspect-ratio: 2/1;
+    }
+
+}
+
+
+
+@media screen and (min-width:760px) {
+    #hero {
+        aspect-ratio: 3/1;
+    }
+
+
+}
+
+
+.card img {
+    width: 100%;
     aspect-ratio: 3/2;
+
+}
+
+.card {
+    overflow: hidden;
+
+}
+
+.card-text {
+    font-size: 0.5em;
+}
+
+.size {
+    font-size: 1.2em;
+}
+
+.card .btn:hover {
+    background-color: black;
+    color: white;
 }
 
 .container .btn {
-    width: 140px;
+    width: 100%;
+}
+
+.modal .btn {
+    width: 25%;
+    font-size: 0.8em;
 }
 
 #invia,
 #modifica,
 #delete {
-    width: 15%;
+    width: 100%;
     font-size: 0.8em;
+
+}
+
+@media screen and (min-width:756px) {
+
+    #invia,
+    #modifica,
+    #delete {
+        width: 15%;
+        font-size: 0.8em;
+    }
 }
 
 #details-container img {
@@ -29,5 +100,6 @@
 }
 
 #saveChange {
-    width: 120px;
+    width: 50%;
+
 }

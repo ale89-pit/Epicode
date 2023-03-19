@@ -11,8 +11,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <header class="mb-3">
+        <nav class="navbar navbar-expand-lg  ">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Navbar</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -36,12 +36,40 @@
             </div>
         </nav>
     </header>
-    <main class="container">
-        <div class="row">
-            <div class="col">
-                <ul class="list-group">
+    <div id="hero" class="container-fluid mb-3">
+        <div class="row ">
+            <div class="col d-flex flex-column justify-content-between  align-items-center ">
+                <div>
+                    <h1>Lorem, ipsum dolor</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sunt tenetur molestias? Porro, ad
+                        similique veritatis voluptatum temporibus voluptas iste consectetur in officiis, placeat
+                        repudiandae! Quidem quisquam sit qui nesciunt.</p>
+                </div>
 
-                </ul>
+                <div>
+
+                    <form class="d-flex mb-2" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-light" type="submit">Search</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <main class="container">
+        <div class="row" id="prod">
+
+        </div>
+        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom"
+            aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasBottomLabel">Offcanvas bottom</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body small">
+                ...
             </div>
         </div>
     </main>

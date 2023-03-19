@@ -5,10 +5,10 @@ console.log(divRef);
 const showSingleProd = (singlProd) => {
   console.log(singlProd);
   divRef.innerHTML = `
-  <div class="col col-6">
+  <div class="col col-12 col-md-6">
     <img  src="${singlProd.imageUrl}">
     </div>
-        <div class="col col-6 d-flex flex-column justify-content-between">
+        <div class="col col-12 col-md-6 d-flex flex-column justify-content-between">
             <h4>${singlProd.name}</h4><br>
             <span>${singlProd.description}</span><br>
 
@@ -16,7 +16,7 @@ const showSingleProd = (singlProd) => {
             
                 <p>${singlProd.brand}</p>
                 <p>${singlProd.price}€</p>
-                <a href="./back-off.html?idRef=${singlProd._id}" class="btn btn-info">MODIFICA</a>
+                <a href="./back-off.html?idRef=${singlProd._id}" class="btn btn-outline-secondary">MODIFICA</a>
         </div>
     
                 `;

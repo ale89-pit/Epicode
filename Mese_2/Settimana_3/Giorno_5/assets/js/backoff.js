@@ -9,6 +9,7 @@ let modalText = document.getElementById("textModal");
 let saveChange = document.getElementById("saveChange");
 let deleteModal = document.getElementById("deleteModal");
 let newProd;
+let url;
 let titleModal = document.getElementById("modalLabel");
 console.log(modalText);
 console.log(btnDelete);
@@ -49,7 +50,6 @@ formRef.addEventListener("submit", (e) => {
     imageUrl: document.getElementById("url").value,
     price: document.getElementById("price").value,
   };
-  console.log(newProd);
 });
 //Prova per modal
 // myModal.addEventListener("shown.bs.modal", function () {
@@ -58,7 +58,7 @@ formRef.addEventListener("submit", (e) => {
 // });
 
 const saveProd = async function (newProd) {
-  let url = idRef ? URLREQ + idRef : URLREQ;
+  url = idRef ? URLREQ + idRef : URLREQ;
   let response = await fetch(url, {
     method: idRef ? "PUT" : "POST",
     body: JSON.stringify(newProd),
@@ -69,6 +69,7 @@ const saveProd = async function (newProd) {
     },
   });
   if (response.ok) {
+    window.location.replace("./index.html");
   } else {
     alert("Qualcosa è andato storto");
   }
@@ -96,7 +97,7 @@ btnInvia.addEventListener("click", function () {
   saveChange.classList.remove("d-none");
 });
 btnModifica.addEventListener("click", function () {
-  titleModal.innerHTML = "MODFICARE QUESTO PRODOTTO?";
+  titleModal.innerHTML = "MODIFICARE QUESTO PRODOTTO?";
   modalText.innerHTML = `<p>conferma per modificare il prodotto o annulla.Questa azione modifichera l'articolo in maniera definitiva.Confermare??</p>`;
   saveChange.classList.remove("d-none");
 });
@@ -107,9 +108,8 @@ btnDelete.addEventListener("click", function () {
 });
 saveChange.addEventListener("click", function () {
   console.log("hai cliccato", saveChange);
-
-  saveProd();
-  window.location.replace("./index.html");
+  console.log();
+  saveProd(newProd);
 });
 
 deleteModal.addEventListener("click", function () {

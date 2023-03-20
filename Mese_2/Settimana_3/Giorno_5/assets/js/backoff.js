@@ -98,7 +98,7 @@ btnInvia.addEventListener("click", function () {
 });
 btnModifica.addEventListener("click", function () {
   titleModal.innerHTML = "MODIFICARE QUESTO PRODOTTO?";
-  modalText.innerHTML = `<p>conferma per modificare il prodotto o annulla.Questa azione modifichera l'articolo in maniera definitiva.Confermare??</p>`;
+  modalText.innerHTML = `<p>Questa azione modifichera l'articolo in maniera definitiva.Confermare??</p>`;
   saveChange.classList.remove("d-none");
 });
 btnDelete.addEventListener("click", function () {
@@ -107,8 +107,6 @@ btnDelete.addEventListener("click", function () {
   deleteModal.classList.remove("d-none");
 });
 saveChange.addEventListener("click", function () {
-  console.log("hai cliccato", saveChange);
-  console.log();
   saveProd(newProd);
 });
 

@@ -1,5 +1,5 @@
 let URLREQ = "https://striveschool-api.herokuapp.com/api/product/";
-
+let product = [];
 const getProd = async function () {
   try {
     let response = await fetch(URLREQ, {
@@ -8,7 +8,7 @@ const getProd = async function () {
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDE0MjYzNmY4MWI0MjAwMTM5YjI3ZDciLCJpYXQiOjE2NzkwNDIxMDIsImV4cCI6MTY4MDI1MTcwMn0.XcRxEXHvGf1QFmNeZSCeRQ6adMSA-kks6vkyPP9VqHQ",
       },
     });
-    let product = await response.json();
+    product = await response.json();
     console.log(product);
     ShowProd(product);
   } catch {}
@@ -35,7 +35,7 @@ const ShowProd = function (product) {
                     <div class="btn-group">
                         <button type="button" class="btn btn-sm btn-outline-secondary" onClick="window.location='./details.html?idRef=${element._id}'">View</button>
                         <button type="button" class="btn btn-sm btn-outline-secondary" onClick="window.location='./back-off.html?idRef=${element._id}'">Modifica</button>
-                        <button type="button" class="btn btn-sm btn-outline-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom" onclick="hideCard(event)">Add </button>
+                        <button type="button" class="btn btn-sm btn-outline-secondary" onclick="addCart(${element._id})">Add </button>
                     </div>
                     
                  </div>
@@ -43,11 +43,23 @@ const ShowProd = function (product) {
         </div>
     </div>    
   `;
-
-    console.log(divReference);
   });
 };
 getProd();
+
+// const addCart = async function (id) {
+//   console.log(id);
+//   product.forEach((e) => {
+//     if (product._id === id) {
+//       let cart = localStorage.getItem("cartRecord")
+//         ? JSON.parse(localStorage.getItem("cartRecord"))
+//         : [];
+//       cart.push({ name: e.name, img: e.imgUrl, price: e.price });
+//       localStorage.setItem("cartRecord", JSON.stringify(cart));
+//     }
+//   });
+// };
+
 // <img src="${element.imageUrl}"
 //       <span>
 
